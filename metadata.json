@@ -1,0 +1,6 @@
+{
+  "name": "JBAI Multi-Tenant Digital Profile & QR Hub",
+  "description": "Multi-tenant digital visiting card, social profile & dynamic QR hub with role-based Master Admin and Client View modes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

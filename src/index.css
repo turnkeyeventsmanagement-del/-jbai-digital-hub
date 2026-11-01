@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #d4af37;
+    --gold-light: #fbeea4;
+    --gold-dark: #996515;
+    --gold-gradient: linear-gradient(135deg, #fbeea4 0%, #d4af37 50%, #aa771c 100%);
+    --gold-border: linear-gradient(135deg, rgba(251, 238, 164, 0.6) 0%, rgba(212, 175, 55, 0.4) 50%, rgba(170, 119, 28, 0.2) 100%);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #050b18;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.04em;
+  }
+}
+
+/* Luxury Glassmorphism & Gold Effects */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #fff3c4 0%, #e6c66e 40%, #c5972c 75%, #fae8a7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #f3d47d 0%, #d4af37 45%, #9e6f15 100%);
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 15px -3px rgba(212, 175, 55, 0.15), inset 0 0 12px -5px rgba(212, 175, 55, 0.1);
+}
+
+.gold-border-glow-hover:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 0 22px -3px rgba(212, 175, 55, 0.3), inset 0 0 15px -3px rgba(212, 175, 55, 0.2);
+}
+
+.glass-panel {
+  background: rgba(10, 22, 48, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-panel-subtle {
+  background: rgba(14, 29, 64, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gold-card-shadow {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 30px -10px rgba(212, 175, 55, 0.15);
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #081124;
+}
+::-webkit-scrollbar-thumb {
+  background: #253352;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
